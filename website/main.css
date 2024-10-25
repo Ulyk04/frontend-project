@@ -58,3 +58,44 @@ main {
     margin-left: 600px; 
 }
 
+@media(max-width: 768px){
+    img{
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        top: 1200px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        grid-template-rows: auto auto; 
+        gap: 10px; 
+        margin-left: 35px;
+        text-align: center;
+    }
+    
+    nav ul li:nth-child(1),
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3),
+    nav ul li:nth-child(4) {
+        grid-column: span 1;
+    }
+    
+    nav ul li:nth-child(5) {
+        grid-column: 1,5 / span 1; 
+    }
+    
+    nav ul li:nth-child(6) {
+        grid-column: 3 / span 1; 
+    }
+    
+    nav ul li:nth-child(7) {
+        grid-column: 4 / span 1; 
+    }
+    
+    nav ul li a {
+        font-size: 20px; 
+        border-bottom: none;
+    }
+}
